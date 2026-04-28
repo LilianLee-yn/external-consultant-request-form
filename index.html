@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>External Consultant Hire Request — Proton</title>
+<link rel="icon" type="image/svg+xml" href="assets/proton-logomark.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <img src="assets/proton-logo.svg" alt="Proton" class="logo" />
+    <span class="header-tag">People Operations</span>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <p class="eyebrow">Hiring request</p>
+    <h1>External consultant hire request</h1>
+    <p class="lede">
+      Use this form to request a new external consultant. The People team will review your submission and get back to you within 2&ndash;3 working days.
+      Fields marked <span class="req">*</span> are required.
+    </p>
+  </section>
+
+  <form id="hire-form" class="card" novalidate>
+
+    <!-- ============== SECTION 1: Agreement ============== -->
+    <fieldset class="section">
+      <legend>
+        <span class="step">01</span>
+        <span class="step-title">Consulting agreement</span>
+      </legend>
+
+      <div class="field">
+        <label class="field-label">Is the consulting agreement in place? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio">
+            <input type="radio" name="agreement" value="Yes — already signed" required />
+            <span class="radio-text">Yes — already signed</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="agreement" value="Not yet — please create a Proton agreement" required />
+            <span class="radio-text">Not yet — please create a Proton agreement</span>
+          </label>
+        </div>
+        <p class="help" id="agreement-help" hidden>
+          The consulting agreement will take approximately 2&ndash;5 working days to prepare and complete the signing process.
+        </p>
+      </div>
+    </fieldset>
+
+    <!-- ============== SECTION 2: Requester ============== -->
+    <fieldset class="section">
+      <legend>
+        <span class="step">02</span>
+        <span class="step-title">Your details</span>
+      </legend>
+
+      <div class="field">
+        <label class="field-label" for="requester-name">Your name <span class="req">*</span></label>
+        <input id="requester-name" name="requester_name" type="text" required autocomplete="name" />
+      </div>
+    </fieldset>
+
+    <!-- ============== SECTION 3: Consultant ============== -->
+    <fieldset class="section">
+      <legend>
+        <span class="step">03</span>
+        <span class="step-title">External consultant</span>
+      </legend>
+
+      <p class="description section-description">
+        These names are used for contracting purposes — please double-check the spelling with your external consultant.
+      </p>
+
+      <div class="grid-2">
+        <div class="field">
+          <label class="field-label" for="legal-first-name">Legal first name <span class="req">*</span></label>
+          <input id="legal-first-name" name="legal_first_name" type="text" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="legal-last-name">Legal last name <span class="req">*</span></label>
+          <input id="legal-last-name" name="legal_last_name" type="text" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="preferred-name">Preferred name <span class="muted">(Optional)</span></label>
+        <input id="preferred-name" name="preferred_name" type="text" />
+        <p class="description">Used for email and Slack setup.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label class="field-label" for="personal-email">Personal email address <span class="req">*</span></label>
+          <input id="personal-email" name="personal_email" type="email" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="company-name">External consultant's company name</label>
+          <input id="company-name" name="company_name" type="text" />
+          <p class="description">
+            If they are signing and will be billing under their own company, please specify the company name in this field.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label class="field-label" for="job-title">Job title <span class="req">*</span></label>
+          <input id="job-title" name="job_title" type="text" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="country-of-work">Country of work <span class="req">*</span></label>
+          <input id="country-of-work" name="country_of_work" type="text" required />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field">
+          <label class="field-label" for="group-team">Group / Department / Team / Cost Center <span class="req">*</span></label>
+          <input id="group-team" name="group_team" type="text" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="reporting-to">Reporting to <span class="req">*</span></label>
+          <input id="reporting-to" name="reporting_to" type="text" required />
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- ============== SECTION 4: Engagement ============== -->
+    <fieldset class="section">
+      <legend>
+        <span class="step">04</span>
+        <span class="step-title">Engagement details</span>
+      </legend>
+
+      <div class="grid-2">
+        <div class="field">
+          <label class="field-label" for="start-date">Start date <span class="req">*</span></label>
+          <input id="start-date" name="start_date" type="date" required />
+        </div>
+        <div class="field">
+          <label class="field-label" for="end-date">End date <span class="muted">(Optional)</span></label>
+          <input id="end-date" name="end_date" type="date" />
+          <p class="description">If no end date is planned, leave this blank.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="duties">General description of the duties <span class="req">*</span></label>
+        <textarea id="duties" name="duties" rows="5" required placeholder="What will the consultant do? Mention scope, deliverables, and any relevant context."></textarea>
+      </div>
+
+      <p class="section-description">
+        Ideally, external consultants should be paid hourly. Please enter <strong>either</strong> an hourly rate <strong>or</strong> a daily rate — there's no need to fill in both.
+      </p>
+
+      <div class="grid-3">
+        <div class="field">
+          <label class="field-label" for="hourly-rate">Hourly rate <span class="muted">(Optional)</span></label>
+          <input id="hourly-rate" name="hourly_rate" type="number" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="daily-rate">Daily rate <span class="muted">(Optional)</span></label>
+          <input id="daily-rate" name="daily_rate" type="number" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label class="field-label" for="currency">Currency</label>
+          <select id="currency" name="currency">
+            <option value="" selected>Select…</option>
+            <option>CHF</option>
+            <option>EUR</option>
+            <option>GBP</option>
+            <option>USD</option>
+            <option>Other</option>
+          </select>
+          <input
+            id="currency-other"
+            name="currency_other"
+            type="text"
+            class="currency-other-input"
+            placeholder="Please specify currency (e.g. SGD, JPY)"
+            hidden
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="hours-per-week">Working hours per week <span class="req">*</span></label>
+        <input id="hours-per-week" name="hours_per_week" type="text" required placeholder="e.g. No more than 40 hours per week" />
+        <p class="description">Applicable to both hourly and daily rate engagements.</p>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="access">What kind of access does the external consultant require?</label>
+        <select id="access" name="access">
+          <option value="" selected>Select…</option>
+          <option>Slack only</option>
+          <option>Slack + Email</option>
+          <option>Slack + Email + other tools requiring DevVPN access</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <!-- ============== SECTION 5: Laptop ============== -->
+    <fieldset class="section">
+      <legend>
+        <span class="step">05</span>
+        <span class="step-title">Equipment</span>
+      </legend>
+
+      <div class="field">
+        <label class="field-label">Are you requesting a laptop exception for your external consultant? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio">
+            <input type="radio" name="laptop_exception" value="No" required />
+            <span class="radio-text">No</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="laptop_exception" value="Yes" required />
+            <span class="radio-text">Yes</span>
+          </label>
+        </div>
+        <p class="description">
+          The questions below apply to both options — please complete them once you've selected Yes or No.
+        </p>
+      </div>
+
+      <div id="laptop-details" hidden>
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" name="screenshot_confirmed" value="Yes" />
+            <span>I confirm I will provide a screenshot of the approval of the exception request ticket if I have selected to request an exception for my external consultant.</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="laptop-pref">Laptop preference</label>
+          <select id="laptop-pref" name="laptop_preference">
+            <option value="" selected>Select…</option>
+            <option>Mac</option>
+            <option>Windows</option>
+            <option>Others</option>
+          </select>
+          <input
+            id="laptop-pref-other"
+            name="laptop_preference_other"
+            type="text"
+            class="currency-other-input"
+            placeholder="Please specify the required model"
+            hidden
+          />
+        </div>
+
+        <div class="field">
+          <label class="field-label">Is the person located in the EU or countries where we have an entity / office (US, UK, TW)?</label>
+          <div class="radio-group">
+            <label class="radio"><input type="radio" name="entity_location" value="Yes" /><span class="radio-text">Yes</span></label>
+            <label class="radio"><input type="radio" name="entity_location" value="No" /><span class="radio-text">No</span></label>
+          </div>
+        </div>
+
+        <!-- Entity = Yes: pickup at office, optional shipping address -->
+        <div id="entity-yes-block" hidden>
+          <div class="field">
+            <label class="field-label" for="pickup-office">Can the external consultant pick up the laptop at one of our offices?</label>
+            <select id="pickup-office" name="pickup_office">
+              <option value="" selected>Select…</option>
+              <option>Geneva</option>
+              <option>Zurich</option>
+              <option>Skopje</option>
+              <option>Taiwan</option>
+              <option>Barcelona</option>
+              <option>Paris</option>
+              <option>Lithuania</option>
+              <option>Prague</option>
+              <option>London</option>
+              <option value="None">None of the above — please ship to the address below</option>
+            </select>
+          </div>
+
+          <div id="delivery-fields" hidden>
+            <div class="field">
+              <label class="field-label">Delivery address</label>
+              <div class="grid-2">
+                <input name="addr_line1" type="text" placeholder="Address" />
+                <input name="addr_line2" type="text" placeholder="Address line 2" />
+                <input name="addr_city" type="text" placeholder="City / Town" />
+                <input name="addr_state" type="text" placeholder="State / Region / Province" />
+                <input name="addr_zip" type="text" placeholder="Zip / Post code" />
+                <input name="addr_country" type="text" placeholder="Country" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="delivery-mobile">External consultant's mobile number</label>
+              <input id="delivery-mobile" name="delivery_mobile" type="tel" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Entity = No: buy-and-expense notice + confirmation -->
+        <div id="entity-no-block" hidden>
+          <div class="field">
+            <p class="section-description">
+              For external consultants located outside of the EU, or in countries where we don't have any entity / office, they will need to purchase the laptop and YubiKey themselves, to be expensed once they onboard via invoice.
+              <br /><br />
+              See the
+              <a href="https://protonag.atlassian.net/wiki/spaces/HR/pages/371294209/External+Consultant+Launchpad#%F0%9F%92%BB-Company-Laptop-Delivery-%26-Yubikey-By-Default"
+                 target="_blank" rel="noopener noreferrer">
+                External Consultant Launchpad — Company Laptop Delivery &amp; YubiKey
+              </a>
+              for the full process.
+            </p>
+          </div>
+
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" id="buy-expense-confirmed" name="buy_expense_confirmed" value="Yes" />
+              <span>I confirm I understand the buy and expense process. <span class="req">*</span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- ============== Submit ============== -->
+    <div class="actions">
+      <button type="submit" class="btn-primary">Submit request</button>
+      <p class="actions-hint">If you have any questions, kindly reach out to Lilian via Slack or email (<a href="mailto:lilian.lee@proton.ch">lilian.lee@proton.ch</a>).</p>
+    </div>
+
+    <div id="form-error" class="form-error" hidden>
+      Please complete the required fields highlighted above.
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; Proton AG &mdash; Internal use only</span>
+    <span class="muted">Privacy by default</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
