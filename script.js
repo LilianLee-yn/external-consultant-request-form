@@ -11,9 +11,9 @@
 
 const PRIMARY_RECIPIENT_EMAIL = 'lilian.lee@proton.ch';
 
-// TODO: replace with the HR / People team alias once confirmed.
+// People team alias — receives every submission alongside the primary recipient.
 // Leave as empty string ('') to send to the primary recipient only.
-const SECOND_RECIPIENT_EMAIL = '';
+const SECOND_RECIPIENT_EMAIL = 'people@proton.ch';
 
 const EMAIL_SUBJECT = 'External consultant hire request';
 
